@@ -12,7 +12,6 @@ private:
 	string teamName;
 	string country;
 	string since;
-	// string player[10];
 	vector<string> player;
 
 public:
@@ -59,6 +58,62 @@ public:
 	void setPlayer(vector<string> player)
 	{
 		this->player.insert(this->player.end(), player.begin(), player.end());
+	}
+
+	class Stadium
+	{
+	private:
+		string stadiumName;
+		int capacity;
+		string stadiumLocation;
+
+	public:
+		void setStadiumName(string stadiumName)
+		{
+			this->stadiumName = stadiumName;
+		};
+		string getStadiumName()
+		{
+			return this->stadiumName;
+		};
+
+		void setCapacity(int capacity)
+		{
+			this->capacity = capacity;
+		};
+
+		int getCapacity()
+		{
+			return this->capacity;
+		};
+
+		void setStadiumLocation(string stadiumLocation)
+		{
+			this->stadiumLocation = stadiumLocation;
+		}
+
+		void ShowStadium()
+		{
+			cout << "      --------" << endl;
+			cout << "      HOMEBASE" << endl;
+			cout << "      --------" << endl;
+			cout << "Stadium Name: " + this->stadiumName << endl;
+			cout << "Capacity: " << this->capacity << endl;
+			cout << "Stadium Location: " + this->stadiumLocation << endl;
+		}
+	};
+
+	Stadium st;
+	void setStadium(string stadiumName, int capacity, string stadiumLocation)
+	{
+		st.setStadiumName(stadiumName);
+		st.setStadiumLocation(stadiumLocation);
+		st.setCapacity(capacity);
+	};
+
+	Stadium getStadium()
+	{
+		return st;
 	}
 
 	void ShowTeam()

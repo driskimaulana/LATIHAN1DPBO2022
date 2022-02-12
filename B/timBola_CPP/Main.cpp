@@ -16,10 +16,14 @@ int main()
 	arsenal.setSince("1886");
 	arsenal.setPlayer(arsPlayer);
 
+	arsenal.setStadium("Emirates Stadium", 60260, "London, UK");
+
 	// print result
 	arsenal.ShowTeam();
+	arsenal.getStadium().ShowStadium();
 
-	cout << "=========================" << endl;
+	cout << "\n=========================\n"
+		 << endl;
 
 	// create new instance of Team class
 	Team persib;
@@ -28,5 +32,7 @@ int main()
 	persib.setCountry("Indonesia");
 	persib.setSince("1933");
 	persib.setPlayer(psbPlayer);
+	persib.setStadium("GBLA", 40157, "Bandung, Indonesia");
 	persib.ShowTeam();
+	persib.getStadium().ShowStadium();
 }

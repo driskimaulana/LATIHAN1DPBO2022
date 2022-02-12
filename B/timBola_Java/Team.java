@@ -1,5 +1,3 @@
-package Latihan1.B.timBola_Java;
-
 public class Team {
 
 	// class attribute
@@ -7,6 +5,8 @@ public class Team {
 	private String country;
 	private String since;
 	private String[] player;
+
+	private Stadium st;
 
 	// empty consturctors
 	Team() {
@@ -46,12 +46,78 @@ public class Team {
 		return since;
 	}
 
+	public void setSt(String stadiumName, int capacity, String stadiumLocation) {
+		st = new Stadium();
+		st.setStadiumLocation(stadiumLocation);
+		st.setcapacity(capacity);
+		st.setStadiumName(stadiumName);
+	}
+
+	public Stadium getSt() {
+		return st;
+	}
+
 	public void setPlayer(String[] player) {
 		this.player = player;
 	}
 
 	public String[] getPlayer() {
 		return player;
+	}
+
+	class Stadium {
+
+		// stadiumclass attribute
+		public String stadiumName;
+		public int capacity;
+		public String stadiumLocation;
+
+		// constructors
+		Stadium() {
+
+		}
+
+		Stadium(String stadiumName, int capacity, String stadiumLocation) {
+			this.stadiumLocation = stadiumLocation;
+			this.capacity = capacity;
+			this.stadiumName = stadiumName;
+		}
+
+		// setter and getter
+		public void setStadiumLocation(String stadiumLocation) {
+			this.stadiumLocation = stadiumLocation;
+		}
+
+		public String getStadiumLocation() {
+			return stadiumLocation;
+		}
+
+		public void setStadiumName(String stadiumName) {
+			this.stadiumName = stadiumName;
+		}
+
+		public String getStadiumName() {
+			return stadiumName;
+		}
+
+		public void setcapacity(int capacity) {
+			this.capacity = capacity;
+		}
+
+		public int getcapacity() {
+			return capacity;
+		}
+
+		// method for show the stadium class result
+		public void ShowStadium() {
+			System.out.println("      --------");
+			System.out.println("      HOMEBASE");
+			System.out.println("      --------");
+			System.out.println("Stadium Name: " + this.getStadiumName());
+			System.out.println("Capacity: " + this.getcapacity());
+			System.out.println("Location: " + this.getStadiumLocation());
+		}
+
 	}
 
 	// method for showing the result
