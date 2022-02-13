@@ -15,5 +15,10 @@ echo "<br>";
 $persibPlayer = array("Febry Haryadi", "Teja Paku", "Beckham Putra", "Marc Klok");
 // create new Team instance named Persib
 $persib = new Team("Persib", "Indonesia", "1993", $persibPlayer);
+$persib->setTeamName("Persib");
+$persib->setCountry("Indonesia");
+$persib->setSince("1993");
+$persib->setPlayer($persibPlayer);
+
 // show the persib team
 $persib->ShowTeam();
